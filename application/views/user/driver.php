@@ -1,11 +1,11 @@
-<div class="rightpanel" style="margin-left:260px;">
+
     <div class="maincontent">
         <div class="maincontentinner">
-            
+            <form method="post" action="<?=base_url()?>Context/driver">
             <div class="widgetbox box-inverse">
                 <h4 class="widgettitle">Personal Details</h4>
                 <div class="widgetcontent nopadding">
-                    <form class="stdform stdform2" method="post" action="<?=base_url()?>Context/driver">
+                    <div class="stdform stdform2">
                         <p>
                             <label>First Name</label>
                             <span class="field"><input type="text" name="firstname" class="input-xxlarge"></span>
@@ -41,12 +41,14 @@
                         <p class="stdformbutton">
                             <button type="reset" class="btn">Reset Button</button>
                         </p>
+                    </div>
                 </div>
             </div>
 
             <div class="widgetbox box-inverse">
                 <h4 class="widgettitle">Vehicle Information</h4>
                 <div class="widgetcontent nopadding">
+                    <div class="stdform stdform2">
                         <p>
                             <label>Registration Number</label>
                             <span class="field"><input type="text" name="vehicle_registration" class="input-xxlarge"></span>
@@ -78,12 +80,14 @@
                         <p class="stdformbutton">
                             <button type="reset" class="btn">Reset Button</button>
                         </p>
+                    </div>
                 </div>
             </div>
 
             <div class="widgetbox box-inverse">
                 <h4 class="widgettitle">Bank Information</h4>
                 <div class="widgetcontent nopadding">
+                    <div class="stdform stdform2">
                         <p>
                             <label>Bank Name</label>
                             <span class="field"><input type="text" name="bank_name" class="input-xxlarge"></span>
@@ -107,12 +111,13 @@
                         <p class="stdformbutton">
                             <button type="reset" class="btn">Reset Button</button>
                         </p>
+                    </div>
                 </div>
             </div>
         <p class="stdformbutton">
             <button class="btn btn-primary">Submit Button</button>
         </p>
-                            </form>
+        </form>
 
         </div>
     </div>

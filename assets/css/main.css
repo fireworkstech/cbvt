@@ -21,19 +21,23 @@
 	background-color: grey;
 }
 .blue {
-	    background: #255576;
-    border-color: #1a4563;
-    color: white;
+  background: #255576;
+  border-color: #1a4563;
+  color: white;
 }
 a {
 	display: block;
-    border: 1px solid #0c57a3;
-    padding: 10px;
-    background: #0972dd;
-    width: 100%;
-    color: #fff;
-    text-transform: uppercase;
+  border: 1px solid #0c57a3;
+  padding: 10px;
+  background: #0972dd;
+  color: #fff;
+  text-transform: uppercase;
 }
 .inputwrapper select {
 	width: 265px;
+}
+.logout {
+  float: right;
+  margin-right: 20px;
+  margin-top: 10px;
 }

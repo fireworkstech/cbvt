@@ -29,6 +29,7 @@
         }
 
         $parameters = $this->input->post();
+        $parameters['password'] = md5($parameters['password']);
         $this->usermodel->register($parameters);
         return redirect();
       }
@@ -41,21 +42,22 @@
           $this->session->set_flashdata('login_error', 'Invalid Username or Password');
           return redirect('login');
         }
-          if ($this->session->userdata('logged_in')) {
-              return redirect();
-          }
+        
+        if ($this->session->userdata('logged_in')) {
+            return redirect();
+        }
 
-          $user = $this->input->post('username');
-          $pass = $this->input->post('password');
-          $results = $this->usermodel->login($user, $pass);
-          if (!$results) {
-              $this->session->set_flashdata('login_error', 'Invalid Username or Password');
-              return redirect('login');
-          } else {
-              // error_log(print_r($results , true));
-              $this->session->set_userdata('logged_in', $results[0]);
-              return redirect();
-          }
+        $user = $this->input->post('username');
+        $pass = md5($this->input->post('password'));
+        $results = $this->usermodel->login($user, $pass);
+        if (!$results) {
+            $this->session->set_flashdata('login_error', 'Invalid Username or Password');
+            return redirect('login');
+        } else {
+            // error_log(print_r($results , true));
+            $this->session->set_userdata('logged_in', $results[0]);
+            return redirect();
+        }
       }
 
       public function displayRegister() {

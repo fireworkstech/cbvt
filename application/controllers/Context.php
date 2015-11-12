@@ -11,7 +11,7 @@
 
   	      public function __construct() {
           parent::__construct();
-          $this->load->model('usermodel');
+          $this->load->model('contextmodel');
       }
       public function index()
       {
@@ -31,8 +31,34 @@
       }
       public function driver()
       {
+        $this->form_validation->set_rules('firstname', 'Firstname', 'trim|required|min_length[3]|max_length[20]');
+        $this->form_validation->set_rules('lastname', 'Lastname', 'trim|required|min_length[3]|max_length[20]');
+        $this->form_validation->set_rules('address', 'Address', 'trim|required|min_length[3]|max_length[20]');
+        $this->form_validation->set_rules('license', 'License', 'trim|required|min_length[3]|max_length[20]');
+        $this->form_validation->set_rules('passport', 'Passport', 'trim|required|min_length[3]|max_length[20]');
+        // $this->form_validation->set_rules('start_date', 'Start Date', 'trim|required|min_length[10]');
+        // $this->form_validation->set_rules('end_date', 'End Date', 'trim|required|min_length[10]');
+        $this->form_validation->set_rules('vehicle_registration', 'Vehicle Registration', 'trim|required|min_length[3]|max_length[20]');
+        $this->form_validation->set_rules('vin', 'VIN', 'trim|required|min_length[3]|max_length[20]');
+        $this->form_validation->set_rules('vehicle_company', 'Vehicle Company', 'trim|required|min_length[3]|max_length[20]');
+        $this->form_validation->set_rules('vehicle_model', 'Vehicle Model', 'trim|required|min_length[3]|max_length[20]');
+        $this->form_validation->set_rules('vehicle_year', 'Vehicle Year', 'trim|required|min_length[3]|max_length[20]');
+        $this->form_validation->set_rules('vehicle_registration', 'Vehicle Registration', 'trim|required|min_length[3]|max_length[20]');
+        $this->form_validation->set_rules('vehicle_color', 'Vehicle Color', 'trim|required|min_length[3]|max_length[20]');
+        $this->form_validation->set_rules('bank_name', 'Bank Name', 'trim|required|min_length[3]|max_length[20]');
+        $this->form_validation->set_rules('loan', 'Loan', 'trim|required|min_length[3]|max_length[20]');
+        $this->form_validation->set_rules('insurance_company', 'Insurance Company', 'trim|required|min_length[3]|max_length[20]');
+        $this->form_validation->set_rules('insurance_policy', 'Insurance Policy', 'trim|required|min_length[3]|max_length[20]');
+
+        // if ($this->form_validation->run() == FALSE) {
+        //   $this->session->set_flashdata('login_error', 'Invalid Username or Password');
+        //   return redirect();
+        // }
+
       	$data = $this->input->post();
-      	var_dump($data);
+        $data['user_id'] = $this->session->logged_in['_id'];
+        $this->contextmodel->addWorklist($data);
+      	// var_dump($data);
       }
 
 
