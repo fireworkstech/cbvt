@@ -1,6 +1,7 @@
 
 	<!-- END FOOTER -->
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.validationEngine.js" ></script> 
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.validationEngine-en.js" ></script> 
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/alertify.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/main.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-migrate-1.1.1.min.js"></script>

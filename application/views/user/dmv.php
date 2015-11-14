@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <div class="maincontent">
         <div class="maincontentinner">
         	<div id="worklistModal" class="modal fade" role="dialog">
@@ -17,7 +17,7 @@
 			  	</div>
 			</div>
 			
-            <h4 class="widgettitle">Deletable Row</h4>
+            <!-- <h4 class="widgettitle">Deletable Row</h4> -->
             <table class="table table-bordered responsive">
 	            <thead>
 	                <tr>

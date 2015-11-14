@@ -26,6 +26,7 @@
           $data['content'] = 'user/dmv';
         } else if ($type == 'bank') {
           $data['title'] = 'Cross Border Vehicle Transport | Bank';
+          $data['worklists'] = $this->contextmodel->getAllWorklists(array('is_dmv'=>true));
           $data['content'] = 'user/bank';
         }
           return $this->load->view("dashboard/dashboard",$data);

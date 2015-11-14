@@ -26,8 +26,12 @@
           return $this->_connection->updateCustom($this->_table, $key, $parameters);
       }
 
-      public function getAllWorklists()
+      public function getAllWorklists($param=false)
       {
+          if ($param) {
+            return $this->_connection->get_where($this->_table, $param);  
+          }
+
           return $this->_connection->get($this->_table);
       }
       
