@@ -11,6 +11,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.navyblue.css" type="text/css" />
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" type="text/css" />
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/main.css" type="text/css" />
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/alertify.css" type="text/css" />
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.9.1.min.js"></script>
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -21,7 +25,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body >
 	<div class="leftpanel">
+	<?php if ($this->session->logged_in) { ?>
     <h5 class="header">Cross Border Vehicle Transport</h5>
+    <?php } ?>
     </div>
     <div class="rightpanel" style="margin-left:260px;">
     <?php if ($this->session->logged_in) { ?>

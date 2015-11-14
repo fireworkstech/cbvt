@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    // $("#register_from").validationEngine();
-    // $("#login_form").validationEngine();
+    $("#register_from").validationEngine();
+    $("#login_form").validationEngine();
 });
 
     function registerUser() 
@@ -20,3 +20,7 @@ $(document).ready(function () {
 	      });
 	   return false;
 	}); 
+
+    function displayWorklistModal(worklist) {
+        $("#worklistModal").modal('show');
+    }
