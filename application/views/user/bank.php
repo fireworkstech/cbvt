@@ -7,7 +7,7 @@
 					    <div class="modal-header">
 					        <h4 class="modal-title"></h4>
 					    </div>
-					    <div class="modal-body">
+					    <div class="modal-body" id="bank_data">
 					        <p>Some text in the modal.</p>
 					    </div>
 					    <div class="modal-footer">
@@ -32,7 +32,7 @@
 	                <?php foreach ($worklists as $worklist) { ?>
 	                	
 	                <tr>
-	                	<td><?php echo $worklist['firstname'].' '.$worklist['lastname'] ?></td>
+	                	<td><a onclick="displayBank('<?php echo $worklist['_id'] ?>')"><?php echo $worklist['firstname'].' '.$worklist['lastname'] ?></a></td>
 	                    <td><?php echo $worklist['insurance_company'] ?></td>
 	                    <td><?php echo $worklist['insurance_policy'] ?></td>
 	                    <td><?php echo $worklist['bank_name'] ?></td>

@@ -12,6 +12,7 @@
   	      public function __construct() {
           parent::__construct();
           $this->load->model('contextmodel');
+          $this->load->helper('context');
       }
       public function index()
       {
@@ -63,5 +64,32 @@
       	// var_dump($data);
       }
 
+      public function getDmvData() {
+        $id = $this->input->post('id');
+        $result = $this->contextmodel->getWorklist($id);
+
+        echo getDmvData($result);
+      }
+
+      public function getBankData() {
+        $id = $this->input->post('id');
+        $result = $this->contextmodel->getWorklist($id);
+
+        echo getBankData($result);
+      }
+
+      public function dmvRequest() {
+        $decision = $this->input->post('decision');
+        $id = $this->input->post('id');
+
+        return $this->contextmodel->editWorklist(array('dmv_approve'=>$decision) , $id);
+      }
+
+      public function BankRequest() {
+        $decision = $this->input->post('decision');
+        $id = $this->input->post('id');
+
+        return $this->contextmodel->editWorklist(array('bank_approve'=>$decision) , $id);
+      }
 
   }

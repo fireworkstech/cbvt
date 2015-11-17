@@ -24,3 +24,25 @@ $(document).ready(function () {
     function displayWorklistModal(worklist) {
         $("#worklistModal").modal('show');
     }
+
+    function displayDmv(id) {
+        $.ajax({
+                url: base_url + 'context/getDmvData' ,
+                type: "POST",
+                data: {'id':id},
+                success: function(result){
+                    $("#dmv_data").html(result);            
+            }
+        });
+    }
+
+    function displayBank(id) {
+        $.ajax({
+                url: base_url + 'context/getBankData' ,
+                type: "POST",
+                data: {'id':id},
+                success: function(result){
+                    $("#bank_data").html(result);            
+            }
+        });
+    }
