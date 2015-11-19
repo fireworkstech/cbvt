@@ -2,6 +2,8 @@
 
 	function getDmvData($data) {
 		echo '
+			<input type="hidden" name="id" value="'.$data['_id'].'">
+			<input type="hidden" name="type" value="dmv">
 			<div class="row-fluid">
 				<div class="span4">
 					<span> Name </span> <span> '.$data['firstname'].' '.$data['lastname'].'
@@ -51,6 +53,8 @@
 
 	function getBankData($data) {
 		echo '
+			<input type="hidden" name="id" value="'.$data['_id'].'">
+			<input type="hidden" name="type" value="bank">
 			<div class="row-fluid">
 				<div class="span4">
 					<span> Name </span> <span> '.$data['firstname'].' '.$data['lastname'].'

@@ -8,12 +8,12 @@
                     <div class="stdform stdform2">
                         <p>
                             <label>First Name</label>
-                            <span class="field"><input type="text" name="firstname" class="input-xxlarge"></span>
+                            <span class="field"><input type="text" name="firstname" class="input-xxlarge" onkeypress="return blockUserInputs(this, event, false, true, false, false, false, false, false, false, false, false, false, true, false)"></span>
                         </p>
                         
                         <p>
                             <label>Last Name</label>
-                            <span class="field"><input type="text" name="lastname" class="input-xxlarge"></span>
+                            <span class="field"><input type="text" name="lastname" class="input-xxlarge" onkeypress="return blockUserInputs(this, event, false, true, false, false, false, false, false, false, false, false, false, true, false)"></span>
                         </p>
                         
                         <p>
@@ -23,11 +23,11 @@
                         
                         <p>
                             <label>License Number </label>
-                            <span class="field"><input type="number" name="license" class="input-xxlarge"></span></span>
+                            <span class="field"><input type="text" name="license" class="input-xxlarge" onkeypress="return blockUserInputs(this, event, true, true, false, false, false, false, false, false, false, false, false, false, false)"></span></span>
                         </p>
                         <p>
                             <label>Passport Number </label>
-                            <span class="field"><input type="number" name="passport" class="input-xxlarge"></span></span>
+                            <span class="field"><input type="text" name="passport" class="input-xxlarge" onkeypress="return blockUserInputs(this, event, true, true, false, false, false, false, false, false, false, false, false, false, false)"></span></span>
                         </p>                        
                         <p>
                             <label>Start Date </label>
@@ -56,25 +56,25 @@
                         
                         <p>
                             <label>VIN Number</label>
-                            <span class="field"><input type="text" name="vin" class="input-xxlarge"></span>
+                            <span class="field"><input type="text" name="vin" class="input-xxlarge" onkeypress="return blockUserInputs(this, event, true, false, false, false, false, false, false, false, false, false, false, false, false)"></span>
                         </p>
                         
                         <p>
                             <label>Vehicle Company</label>
-                            <span class="field"><input type="text" name="vehicle_company" class="input-xxlarge"></span>
+                            <span class="field"><input type="text" name="vehicle_company" class="input-xxlarge" onkeypress="return blockUserInputs(this, event, false, true, false, false, false, false, false, false, false, false, false, true, false)"></span>
                         </p>
                         
                         <p>
                             <label>Model </label>
-                            <span class="field"><input type="text" name="vehicle_model" class="input-xxlarge"></span></span>
+                            <span class="field"><input type="text" name="vehicle_model" class="input-xxlarge" onkeypress="return blockUserInputs(this, event, false, true, false, false, false, false, false, false, false, false, false, true, false)"></span></span>
                         </p>
                         <p>
                             <label>Year </label>
-                            <span class="field"><input type="text" name="vehicle_year" class="input-xxlarge"></span></span>
+                            <span class="field"><input type="text" name="vehicle_year" class="input-xxlarge" onkeypress="return blockUserInputs(this, event, true, false, false, false, false, false, false, false, false, false, false, false, false)"></span></span>
                         </p>                        
                         <p>
                             <label>Color </label>
-                            <span class="field"><input type="text" name="vehicle_color" class="input-xxlarge"></span></span>
+                            <span class="field"><input type="text" name="vehicle_color" class="input-xxlarge" onkeypress="return blockUserInputs(this, event, false, true, false, false, false, false, false, false, false, false, false, false, false)"></span></span>
                         </p>
                         
                         <p class="stdformbutton">
@@ -90,22 +90,22 @@
                     <div class="stdform stdform2">
                         <p>
                             <label>Bank Name</label>
-                            <span class="field"><input type="text" name="bank_name" class="input-xxlarge"></span>
+                            <span class="field"><input type="text" name="bank_name" class="input-xxlarge" onkeypress="return blockUserInputs(this, event, false, true, false, false, false, false, false, false, false, false, false, true, false)"></span>
                         </p>
                         
                         <p>
                             <label>Loan Number</label>
-                            <span class="field"><input type="text" name="loan" class="input-xxlarge"></span>
+                            <span class="field"><input type="text" name="loan" class="input-xxlarge" onkeypress="return blockUserInputs(this, event, true, false, false, false, false, false, false, false, false, false, false, false, false)"></span>
                         </p>
                         
                         <p>
                             <label>Insurance Company</label>
-                            <span class="field"><input type="text" name="insurance_company" class="input-xxlarge"></span>
+                            <span class="field"><input type="text" name="insurance_company" class="input-xxlarge" onkeypress="return blockUserInputs(this, event, false, true, false, false, false, false, false, false, false, false, false, true, false)"></span>
                         </p>
                         
                         <p>
                             <label>Insurance Policy Number </label>
-                            <span class="field"><input type="text" name="insurance_policy" class="input-xxlarge"></span></span>
+                            <span class="field"><input type="text" name="insurance_policy" class="input-xxlarge" onkeypress="return blockUserInputs(this, event, true, true, false, false, false, false, false, false, false, false, false, false, false)"></span></span>
                         </p>
                         
                         <p class="stdformbutton">

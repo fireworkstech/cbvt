@@ -39,8 +39,8 @@
       {
           if (!$id)
           {
-              return NULL;
+            return NULL;
           }
-          return $this->_connection->get_where($this->_table, array('_id'=>$id));
+          return $this->_connection->get_where($this->_table, array('_id'=>new MongoId($id)));
       }
 }

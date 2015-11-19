@@ -12,6 +12,7 @@
   	      public function __construct() {
           parent::__construct();
           $this->load->model('contextmodel');
+          $this->load->model('usermodel');
           $this->load->helper('context');
       }
       public function index()
@@ -23,11 +24,11 @@
           $data['content'] = 'user/driver';
         } else if ($type == 'dmv') {
           $data['title'] = 'Cross Border Vehicle Transport | DMV';
-          $data['worklists'] = $this->contextmodel->getAllWorklists();
+          $data['worklists'] = $this->contextmodel->getAllWorklists(array('dmv_checked'=>'false'));
           $data['content'] = 'user/dmv';
         } else if ($type == 'bank') {
           $data['title'] = 'Cross Border Vehicle Transport | Bank';
-          $data['worklists'] = $this->contextmodel->getAllWorklists(array('is_dmv'=>true));
+          $data['worklists'] = $this->contextmodel->getAllWorklists(array('dmv_approve'=>'true' , 'bank_checked'=>'false'));
           $data['content'] = 'user/bank';
         }
           return $this->load->view("dashboard/dashboard",$data);
@@ -60,6 +61,8 @@
 
       	$data = $this->input->post();
         $data['user_id'] = $this->session->logged_in['_id'];
+        $data['dmv_checked'] = 'false';
+        $data['bank_checked'] = 'false';
         $this->contextmodel->addWorklist($data);
       	// var_dump($data);
       }
@@ -67,29 +70,29 @@
       public function getDmvData() {
         $id = $this->input->post('id');
         $result = $this->contextmodel->getWorklist($id);
-
-        echo getDmvData($result);
+        
+        echo getDmvData($result[0]);
       }
 
       public function getBankData() {
         $id = $this->input->post('id');
         $result = $this->contextmodel->getWorklist($id);
-
-        echo getBankData($result);
+        
+        echo getBankData($result[0]);
       }
 
       public function dmvRequest() {
         $decision = $this->input->post('decision');
         $id = $this->input->post('id');
 
-        return $this->contextmodel->editWorklist(array('dmv_approve'=>$decision) , $id);
+        return $this->contextmodel->editWorklist(array('dmv_approve'=>$decision , 'dmv_checked'=>'true') , $id);
       }
 
-      public function BankRequest() {
+      public function bankRequest() {
         $decision = $this->input->post('decision');
         $id = $this->input->post('id');
 
-        return $this->contextmodel->editWorklist(array('bank_approve'=>$decision) , $id);
+        return $this->contextmodel->editWorklist(array('bank_approve'=>$decision , 'bank_checked'=>'true') , $id);
       }
 
   }
