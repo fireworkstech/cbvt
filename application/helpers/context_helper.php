@@ -5,47 +5,47 @@
 			<input type="hidden" name="id" value="'.$data['_id'].'">
 			<input type="hidden" name="type" value="dmv">
 			<div class="row-fluid">
-				<div class="span4">
-					<span> Name </span> <span> '.$data['firstname'].' '.$data['lastname'].'
+				<div class="span6">
+					<span><b> Name </b></span> <span> '.$data['firstname'].' '.$data['lastname'].'
 				</div>
-				<div class="span4">
-					<span> License </span> <span> '.$data['license'].'
-				</div>
-			</div>
-
-			<div class="row-fluid">
-				<div class="span4">
-					<span> Start Date </span> <span> '.$data['start_date'].'
-				</div>
-				<div class="span4">
-					<span> End Date </span> <span> '.$data['end_date'].'
+				<div class="span6">
+					<span><b> License </b></span> <span> '.$data['license'].'
 				</div>
 			</div>
 
 			<div class="row-fluid">
-				<div class="span4">
-					<span> Vehicle Registration </span> <span> '.$data['vehicle_registration'].'
+				<div class="span6">
+					<span><b> Start Date </b></span> <span> '.$data['start_date'].'
 				</div>
-				<div class="span4">
-					<span> VIN </span> <span> '.$data['vin'].'
-				</div>
-			</div>
-
-			<div class="row-fluid">
-				<div class="span4">
-					<span> Vehicle Company </span> <span> '.$data['vehicle_company'].'
-				</div>
-				<div class="span4">
-					<span> End Date </span> <span> '.$data['end_date'].'
+				<div class="span6">
+					<span><b> End Date </b></span> <span> '.$data['end_date'].'
 				</div>
 			</div>
 
 			<div class="row-fluid">
-				<div class="span4">
-					<span> Vehicle Model </span> <span> '.$data['vehicle_model'].'
+				<div class="span6">
+					<span><b> Vehicle Registration </b></span> <span> '.$data['vehicle_registration'].'
 				</div>
-				<div class="span4">
-					<span> Vehicle Year </span> <span> '.$data['vehicle_year'].'
+				<div class="span6">
+					<span><b> VIN </b></span> <span> '.$data['vin'].'
+				</div>
+			</div>
+
+			<div class="row-fluid">
+				<div class="span6">
+					<span><b> Vehicle Company </b></span> <span> '.$data['vehicle_company'].'
+				</div>
+				<div class="span6">
+					<span><b> End Date </b></span> <span> '.$data['end_date'].'
+				</div>
+			</div>
+
+			<div class="row-fluid">
+				<div class="span6">
+					<span><b> Vehicle Model </b></span> <span> '.$data['vehicle_model'].'
+				</div>
+				<div class="span6">
+					<span><b> Vehicle Year </b></span> <span> '.$data['vehicle_year'].'
 				</div>
 			</div>
 		';
@@ -56,38 +56,38 @@
 			<input type="hidden" name="id" value="'.$data['_id'].'">
 			<input type="hidden" name="type" value="bank">
 			<div class="row-fluid">
-				<div class="span4">
-					<span> Name </span> <span> '.$data['firstname'].' '.$data['lastname'].'
+				<div class="span6">
+					<span><b> Name </b></span> <span> '.$data['firstname'].' '.$data['lastname'].'
 				</div>
-				<div class="span4">
-					<span> License </span> <span> '.$data['license'].'
-				</div>
-			</div>
-
-			<div class="row-fluid">
-				<div class="span4">
-					<span> Start Date </span> <span> '.$data['start_date'].'
-				</div>
-				<div class="span4">
-					<span> End Date </span> <span> '.$data['end_date'].'
+				<div class="span6">
+					<span><b> License </b></span> <span> '.$data['license'].'
 				</div>
 			</div>
 
 			<div class="row-fluid">
-				<div class="span4">
-					<span> Bank Name </span> <span> '.$data['bank_name'].'
+				<div class="span6">
+					<span><b> Start Date </b></span> <span> '.$data['start_date'].'
 				</div>
-				<div class="span4">
-					<span> Loan </span> <span> '.$data['loan'].'
+				<div class="span6">
+					<span><b> End Date </b></span> <span> '.$data['end_date'].'
 				</div>
 			</div>
 
 			<div class="row-fluid">
-				<div class="span4">
-					<span> Insurance Company </span> <span> '.$data['insurance_company'].'
+				<div class="span6">
+					<span><b> Bank Name </b></span> <span> '.$data['bank_name'].'
 				</div>
-				<div class="span4">
-					<span> Insurance Policy </span> <span> '.$data['insurance_policy'].'
+				<div class="span6">
+					<span><b> Loan </b></span> <span> '.$data['loan'].'
+				</div>
+			</div>
+
+			<div class="row-fluid">
+				<div class="span6">
+					<span><b> Insurance Company </b></span> <span> '.$data['insurance_company'].'
+				</div>
+				<div class="span6">
+					<span><b> Insurance Policy </b></span> <span> '.$data['insurance_policy'].'
 				</div>
 			</div>
 		';

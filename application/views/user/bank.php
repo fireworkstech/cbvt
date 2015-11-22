@@ -14,7 +14,9 @@
 	                </tr>
 	            </thead>
 	            <tbody>	                
-	                <?php foreach ($worklists as $worklist) { ?>
+	                <?php
+	                if ($worklists) {
+	                	foreach ($worklists as $worklist) { ?>
 	                	
 	                <tr>
 	                	<td><a onclick="displayBank('<?php echo $worklist['_id'] ?>')"><?php echo $worklist['firstname'].' '.$worklist['lastname'] ?></a></td>
@@ -24,6 +26,15 @@
 	                    <td><?php echo $worklist['loan'] ?></td>
 	                    <!-- <td class="centeralign"><a href="" class="deleterow"><span class="icon-trash"></span></a></td> -->
 	                </tr>
+	                <?php }
+	                } else { ?>
+	                	<tr>
+	                		<td>Currently there are no pending requests</td>
+	                		<td></td>
+	                		<td></td>
+	                		<td></td>
+	                		<td></td>
+	                	</tr>
 	                <?php } ?>
 	                
 	            </tbody>

@@ -180,16 +180,6 @@ $(document).ready(function () {
         }
     }
 
-    $('.deleterow').click(function(){
-	   var conf = confirm('Continue delete?');
-	   if(conf)
-	      jQuery(this).parents('tr').fadeOut(function(){
-	         jQuery(this).remove();
-	         // do some other stuff here
-	      });
-	   return false;
-	}); 
-
     function displayWorklistModal(worklist) {
         $("#worklistModal").modal('show');
     }
