@@ -14,6 +14,7 @@
           $this->load->model('contextmodel');
           $this->load->model('usermodel');
           $this->load->helper('context');
+          // $this->load->library('word');
       }
       public function index()
       {
