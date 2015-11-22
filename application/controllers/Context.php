@@ -64,6 +64,9 @@
         $data['dmv_checked'] = 'false';
         $data['bank_checked'] = 'false';
         $this->contextmodel->addWorklist($data);
+
+        $this->session->sess_destroy();
+        redirect('login');
       	// var_dump($data);
       }
 
