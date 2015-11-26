@@ -14,14 +14,21 @@
           $this->load->model('contextmodel');
           $this->load->model('usermodel');
           $this->load->helper('context');
+          // $this->load->library('Zend');
+          // $this->zend->load('Zend/barcode');
           // $this->load->library('word');
       }
       public function index()
       {
 
-      	$type = $this->session->logged_in['type'];
+        $type = $this->session->logged_in['type'];
         if ($type == 'driver') {
           $data['title'] = 'Cross Border Vehicle Transport | Driver';
+          
+          // $test = Zend_Barcode::draw('ean8', 'image', array('text' => $this->session->logged_in['username']), array());
+          // var_dump($test);
+          // imagejpeg($test, 'barcode.jpg', 100);
+          
           $data['content'] = 'user/driver';
         } else if ($type == 'dmv') {
           $data['title'] = 'Cross Border Vehicle Transport | DMV';
