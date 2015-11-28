@@ -6,8 +6,8 @@
                 <h4 class="widgettitle">Personal Details</h4>
                 <div class="widgetcontent nopadding">
                     <div class="stdform stdform2">
-                        <img src="<?php echo base_url() ?>application/libraries/barcode.php?text=testing" alt="testing" />
-                        <img alt="testing" src="<?php echo base_url() ?>application/views/user/barcode.php" />
+                        <!-- <img src="<?php echo base_url() ?>application/libraries/Zend/barcode.php?text=testing" alt="testing" />
+                        <img alt="testing" src="<?php echo base_url() ?>application/views/user/barcode.php" /> -->
                         <p>
                             <label>First Name</label>
                             <span class="field"><input type="text" name="firstname" class="input-xxlarge" onkeypress="return blockUserInputs(this, event, false, true, false, false, false, false, false, false, false, false, false, true, false)"></span>
