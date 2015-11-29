@@ -13,16 +13,19 @@
           $this->load->library("Mongo_db");
           $this->_connection = new Mongo_db();
           $this->_table = "worklist";
+          //$db = $this->load->database(); //This is for connecting sql
           parent::__construct();
       }
 
       public function addWorklist($param)
       {
+          // return $this->db->insert('worklist', $param);
           return $this->_connection->insert($this->_table, $param);
       }
       
       public function editWorklist($parameters, $key)
       {
+          // return $this->db->update('worklist', $parameters, "id = ".$key);
           return $this->_connection->updateCustom($this->_table, $key, $parameters);
       }
 
@@ -32,6 +35,7 @@
             return $this->_connection->get_where($this->_table, $param);  
           }
 
+          // return  $this->db->get('worklist');
           return $this->_connection->get($this->_table);
       }
       
@@ -41,6 +45,7 @@
           {
             return NULL;
           }
+          // return $this->db->get_where('worklist', array('id' => $id));
           return $this->_connection->get_where($this->_table, array('_id'=>new MongoId($id)));
       }
 }
