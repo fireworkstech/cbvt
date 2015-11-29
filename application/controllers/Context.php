@@ -14,8 +14,6 @@
           $this->load->model('contextmodel');
           $this->load->model('usermodel');
           $this->load->helper('context');
-          // $this->load->library('Zend');
-          // $this->zend->load('Zend/barcode');
           // $this->load->library('word');
       }
       public function index()
@@ -24,6 +22,15 @@
         $type = $this->session->logged_in['type'];
         if ($type == 'driver') {
           $data['title'] = 'Cross Border Vehicle Transport | Driver';
+          $id = $this->session->logged_in['_id'];
+          // error_log($id);
+          $result = $this->contextmodel->getWorklistByUser($id);
+          // error_log(print_r($result , true));
+          if (isset($result[0]['bank_approve']) && $result[0]['bank_approve'] == 'true') {
+
+          $this->load->library('Zend');
+          $this->zend->load('Zend/barcode');
+          }
           
           // $test = Zend_Barcode::draw('ean8', 'image', array('text' => $this->session->logged_in['username']), array());
           // var_dump($test);

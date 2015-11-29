@@ -235,3 +235,31 @@ $(document).ready(function () {
             });
         }   
     }
+
+    function disApproveWorklist() {
+        id = $("#worklist_data input[name=id]").val();
+        type = $("#worklist_data input[name=type]").val();
+        
+        if (type == 'dmv') {
+            $.ajax({
+                    url: base_url + 'context/dmvRequest' ,
+                    type: "POST",
+                    data: {'id':id , 'decision':false},
+                    success: function(result){
+                        alertify.success('Worklist dis-approved succesfully!');
+                        window.location.reload();          
+                }
+            });
+        }
+        if (type == 'bank') {
+            $.ajax({
+                    url: base_url + 'context/bankRequest' ,
+                    type: "POST",
+                    data: {'id':id , 'decision':false},
+                    success: function(result){
+                        alertify.success('Worklist dis-approved succesfully!');
+                        window.location.reload();          
+                }
+            });
+        }   
+    }

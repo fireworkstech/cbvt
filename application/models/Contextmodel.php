@@ -48,4 +48,14 @@
           // return $this->db->get_where('worklist', array('id' => $id));
           return $this->_connection->get_where($this->_table, array('_id'=>new MongoId($id)));
       }
+
+      public function getWorklistByUser($id)
+      {
+          if (!$id)
+          {
+            return NULL;
+          }
+          // return $this->db->get_where('worklist', array('user_id' => $id));
+          return $this->_connection->get_where($this->_table, array('user_id'=>new MongoId($id)));
+      }
 }
