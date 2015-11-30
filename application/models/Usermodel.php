@@ -19,12 +19,14 @@
 
       public function login($username, $pass) 
       {
-        return $this->db->get_where('users', array('username' => $username , 'password'=>$pass));
-          // $logininfo = $this->_connection->get_where($this->_table, array('username' => $username, 'password' => $pass));
-          // if ($logininfo) {
-          //     return $logininfo;
-          // }
-          // return false;
+        $rs = $this->db->query('select * from users where username="'.$username.'" and password="'.$pass.'"');
+        return $rs->result_array();
+        
+        // $logininfo = $this->_connection->get_where($this->_table, array('username' => $username, 'password' => $pass));
+        // if ($logininfo) {
+        //     return $logininfo;
+        // }
+        // return false;
       }
       public function register($param)
       {
