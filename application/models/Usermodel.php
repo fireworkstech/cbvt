@@ -13,23 +13,24 @@
           $this->load->library("Mongo_db");
           $this->_connection = new Mongo_db();
           $this->_table = "users";
-          // $db = $this->load->database(); //This is for connecting sql
+          $db = $this->load->database(); //This is for connecting sql
           parent::__construct();
       }
 
       public function login($username, $pass) 
       {
-        // return $this->db->get_where('users', array('username' => $username , 'password'=>$pass));
-          $logininfo = $this->_connection->get_where($this->_table, array('username' => $username, 'password' => $pass));
-          if ($logininfo) {
-              return $logininfo;
-          }
-          return false;
+        return $this->db->get_where('users', array('username' => $username , 'password'=>$pass));
+          // $logininfo = $this->_connection->get_where($this->_table, array('username' => $username, 'password' => $pass));
+          // if ($logininfo) {
+          //     return $logininfo;
+          // }
+          // return false;
       }
       public function register($param)
       {
-          // return $this->db->insert('users', $param);
-          return $this->_connection->insert($this->_table, $param);
+          unset($param['submit']);
+          return $this->db->insert('users', $param);
+          // return $this->_connection->insert($this->_table, $param);
       }
       public function update_user($parameters, $key)
       {

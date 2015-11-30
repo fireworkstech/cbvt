@@ -54,9 +54,9 @@
             $this->session->set_flashdata('login_error', 'Invalid Username or Password');
             return redirect('login');
         } else {
-            // error_log(print_r($results , true));
-            $this->session->set_userdata('logged_in', $results[0]);
-            return redirect();
+            error_log(print_r($results , true));
+            // $this->session->set_userdata('logged_in', $results[0]);
+            // return redirect();
         }
       }
 
