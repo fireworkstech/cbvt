@@ -108,6 +108,7 @@
 	}
 
 	$image = imagecreate($img_width, $img_height);
+	// $image = imagecreate(500, 500);
 	$black = imagecolorallocate ($image, 0, 0, 0);
 	$white = imagecolorallocate ($image, 255, 255, 255);
 
