@@ -123,7 +123,11 @@
 		$location = $cur_size;
 	}
 	// Draw barcode to the screen
+	// echo 'hellp';
+	// var_dump('hello');
+	// echo '<img>Taha</img>';
 	header ('Content-type: image/png');
+	
 	imagepng($image);
 	imagedestroy($image);
 	// return $image;

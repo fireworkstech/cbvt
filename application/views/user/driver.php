@@ -1,13 +1,17 @@
 
     <div class="maincontent">
         <div class="maincontentinner">
-            <form method="post" action="<?=base_url()?>Context/driver">
+            <form method="post" action="<?=base_url()?>Context/driver" enctype="multipart/form-data">
             <div class="widgetbox box-inverse">
                 <h4 class="widgettitle">Personal Details</h4>
                 <div class="widgetcontent nopadding">
                     <div class="stdform stdform2">
                         <!-- <img src="<?php echo base_url() ?>application/libraries/Zend/barcode.php?text=testing" alt="testing" />
                         <img alt="testing" src="<?php echo base_url() ?>application/views/user/barcode.php" /> -->
+                        <p>
+                            <label>Image</label>
+                            <span class="field"><input type="file" name="image" class="input-xxlarge" ></span>
+                        </p>
                         <p>
                             <label>First Name</label>
                             <span class="field"><input type="text" name="firstname" class="input-xxlarge" onkeypress="return blockUserInputs(this, event, false, true, false, false, false, false, false, false, false, false, false, true, false)"></span>

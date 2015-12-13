@@ -26,8 +26,17 @@
           // $id = $this->session->logged_in['_id']; // this is for mongo db
           // error_log($id);
           $result = $this->contextmodel->getWorklistByUser($id);
-          
+          // error_log(print_r($result , true));
           if (isset($result[0]['bank_approve']) && $result[0]['bank_approve'] == '1') {
+            // error_log('called');
+            $myfile = fopen($result[0]['firstname']."_license.txt", "w") or die("Unable to open file!");
+            $txt = "Name : ".$result[0]['firstname'].' '.$result[0]['lastname']." \n";
+            fwrite($myfile, $txt);
+            $txt = 'Address : '.$result[0]['address']." \n";
+            fwrite($myfile, $txt);
+            $txt = 'Car : '.$result[0]['vehicle_registration']." \n";
+            fwrite($myfile, $txt);
+            fclose($myfile);
             $this->load->library('Zend');
             $this->zend->load('Zend/barcode');
           }
@@ -82,6 +91,22 @@
         $data['dmv_checked'] = 'false';
         $data['bank_checked'] = 'false';
         $this->contextmodel->addWorklist($data);
+
+$filename = $_FILES['image']['name'];
+          $upload_path = './images/';
+          $allowed_types = 'jpeg|jpg|png|gif';
+        $config['upload_path'] = $upload_path;
+      $config['allowed_types'] = $allowed_types;
+      // $config['max_size'] = 1024;//1mb
+      // $config['max_width'] = 1024;
+      // $config['max_height'] = 1024;
+
+      $this->load->library('upload', $config);
+      $data = NULL;
+      if (!$this->upload->do_upload($filename)) {
+          $this->session->set_userdata('img_errors', $this->upload->display_errors());
+          error_log(print_r($this->upload->display_errors(),true));
+      }
 
         $this->session->sess_destroy();
         redirect('login');
