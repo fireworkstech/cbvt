@@ -7,6 +7,9 @@
 		echo '
 			<input type="hidden" name="type" value="dmv">
 			<div class="row-fluid">
+				<img src="'.$data['image'].'" style="width:100px" >
+			</div>
+			<div class="row-fluid">
 				<div class="span6">
 					<span><b> Name </b></span> <span> '.$data['firstname'].' '.$data['lastname'].'
 				</div>
@@ -59,6 +62,9 @@
 
 		echo '
 			<input type="hidden" name="type" value="bank">
+			<div class="row-fluid">
+				<img src="'.$data['image'].'" style="width:100px" >
+			</div>
 			<div class="row-fluid">
 				<div class="span6">
 					<span><b> Name </b></span> <span> '.$data['firstname'].' '.$data['lastname'].'

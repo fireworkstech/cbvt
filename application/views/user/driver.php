@@ -10,7 +10,7 @@
                         <img alt="testing" src="<?php echo base_url() ?>application/views/user/barcode.php" /> -->
                         <p>
                             <label>Image</label>
-                            <span class="field"><input type="file" name="image" class="input-xxlarge" ></span>
+                            <span class="field"><input type="file" name="profile" class="input-xxlarge" ></span>
                         </p>
                         <p>
                             <label>First Name</label>

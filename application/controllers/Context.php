@@ -90,9 +90,9 @@
         // $data['user_id'] = $this->session->logged_in['_id']; //this is for mongo db
         $data['dmv_checked'] = 'false';
         $data['bank_checked'] = 'false';
-        $this->contextmodel->addWorklist($data);
 
-$filename = $_FILES['image']['name'];
+// $filename = $_FILES['profile']['name'];
+        $filename = "profile";
           $upload_path = './images/';
           $allowed_types = 'jpeg|jpg|png|gif';
         $config['upload_path'] = $upload_path;
@@ -102,12 +102,18 @@ $filename = $_FILES['image']['name'];
       // $config['max_height'] = 1024;
 
       $this->load->library('upload', $config);
-      $data = NULL;
+      // $data = NULL;
+      // error_log($filename);
       if (!$this->upload->do_upload($filename)) {
           $this->session->set_userdata('img_errors', $this->upload->display_errors());
           error_log(print_r($this->upload->display_errors(),true));
+      } else {
+        $image = array('upload_data' => $this->upload->data());
+        $data['image'] = $config['upload_path'] . $image['upload_data']['file_name'];
       }
+        error_log(print_r($data , true));
 
+        $this->contextmodel->addWorklist($data);
         $this->session->sess_destroy();
         redirect('login');
       	// var_dump($data);
